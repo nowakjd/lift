@@ -1,0 +1,26 @@
+
+WINDA 1 - DANE WEJŚCIOWE: 
+Ilosc pieter w budynku: 0
+Parametry ruchu windy:
+   - szybkosc przejazdu miedzy pietrami:  3.0s
+   - przewidywany czas ruchu pojedynczego pasazera: 4.0s
+   - opoznienie zamkniecia drzwi: 4.0s
+Pasazerowie: 
+Ilosc obsluzonych grup pasazerow: 0
+Ilosc przejechanych pieter: 0
+Laczna liczba obsluzonych pasazerow: 0
+Laczny czas obslugi pasazerow: 0.0s
+Czas sredni obslugi jednego pasazera: ok. NaNs
+
+WINDA 2 - DANE WEJŚCIOWE: 
+Ilosc pieter w budynku: 0
+Parametry ruchu windy:
+   - szybkosc przejazdu miedzy pietrami:  3.0s
+   - przewidywany czas ruchu pojedynczego pasazera: 4.0s
+   - opoznienie zamkniecia drzwi: 4.0s
+Pasazerowie: 
+Ilosc obsluzonych grup pasazerow: 0
+Ilosc przejechanych pieter: 0
+Laczna liczba obsluzonych pasazerow: 0
+Laczny czas obslugi pasazerow: 0.0s
+Czas sredni obslugi jednego pasazera: ok. NaNs
