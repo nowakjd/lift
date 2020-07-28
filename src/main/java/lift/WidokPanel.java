@@ -11,6 +11,8 @@
 
 package lift;
 
+
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -107,6 +109,8 @@ int ilosc = 1;
         szyb2.add(Pietro220);
 
       koloruj();
+
+
 
     }
     public void koloruj(){
@@ -384,6 +388,7 @@ int ilosc = 1;
         Pietro4.setName("Pietro4"); // NOI18N
 
         buttonGroup1.add(RadioButtonDwieWindy);
+        RadioButtonDwieWindy.setSelected(true);
         RadioButtonDwieWindy.setText(resourceMap.getString("RadioButtonDwieWindy.text")); // NOI18N
         RadioButtonDwieWindy.setName("RadioButtonDwieWindy"); // NOI18N
         RadioButtonDwieWindy.addActionListener(new java.awt.event.ActionListener() {
@@ -396,7 +401,7 @@ int ilosc = 1;
         Pietro7.setName("Pietro7"); // NOI18N
 
         buttonGroup1.add(RadioButtonJednaWinda);
-        RadioButtonJednaWinda.setSelected(true);
+        RadioButtonJednaWinda.setSelected(false);
         RadioButtonJednaWinda.setText(resourceMap.getString("RadioButtonJednaWinda.text")); // NOI18N
         RadioButtonJednaWinda.setName("RadioButtonJednaWinda"); // NOI18N
         RadioButtonJednaWinda.addActionListener(new java.awt.event.ActionListener() {
@@ -1063,10 +1068,14 @@ int ilosc = 1;
 
     private void RadioButtonJednaWindaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RadioButtonJednaWindaActionPerformed
         Zmienne.iloscWind = 1;
+        hideSecondShaft();
+    }//GEN-LAST:event_RadioButtonJednaWindaActionPerformed
+
+    private void hideSecondShaft() {
         for (JTextField pieterko : szyb2) {
             pieterko.setVisible(false);
         }
-}//GEN-LAST:event_RadioButtonJednaWindaActionPerformed
+    }
 
     private void RadioButtonAlgorytm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RadioButtonAlgorytm1ActionPerformed
         Zmienne.uzywanyAlgorytm = new MyAlgorytm1();
@@ -1227,13 +1236,14 @@ int ilosc = 1;
         else if (nowy_pocz > 20) nowy_pocz = 20;
         System.out.println("Nowy pocz = " +nowy_pocz);
         } catch (Exception e) {
+            System.out.println("W wyjatku " + pomocnicza2);
             nowy_pocz = 1;
         }    }//GEN-LAST:event_TextFieldPoczatkoweActionPerformed
     int nowy_ile = 1;
     private void TextFieldIluPasazerowPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_TextFieldIluPasazerowPropertyChange
         try{
         pomocnicza1 = TextFieldIluPasazerow.getText();
-          nowy_ile = Integer.parseInt(pomocnicza1);
+        nowy_ile = Integer.parseInt(pomocnicza1);
         if (nowy_ile < 0) nowy_ile = Math.abs(nowy_ile);
         System.out.println("Nowy ile = " +nowy_ile);
         } catch (Exception e){
@@ -1249,6 +1259,7 @@ int ilosc = 1;
         else if (nowy_pocz > 20) nowy_pocz = 20;
         System.out.println("Nowy pocz = " +nowy_pocz);
         } catch (Exception e) {
+
             nowy_pocz = 1;
         }
     }//GEN-LAST:event_TextFieldPoczatkowePropertyChange
@@ -1262,7 +1273,7 @@ int ilosc = 1;
         nowy_kon = Integer.parseInt(pomocnicza1);
         if (nowy_kon < 0) nowy_kon = 0;
         else if (nowy_kon > 20) nowy_kon = 20;
-        System.out.println("Nowy kon = " +nowy_kon);
+        System.out.println("Change Nowy kon = " +nowy_kon);
         } catch (Exception e){
             nowy_kon = Zmienne.iloscPieter;
         }
@@ -1297,11 +1308,15 @@ int ilosc = 1;
     }//GEN-LAST:event_ButtonWczytajListeActionPerformed
 
     private void ButtonDodajActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDodajActionPerformed
+        TextFieldPoczatkoweActionPerformed(null);
+        TextFieldIluPasazerowActionPerformed(null);
+        TextFieldKoncoweActionPerformed(null);
+
         Zmienne.listaPasazerow.add(new Pasazer(nowy_ile, nowy_pocz, nowy_kon));
     }//GEN-LAST:event_ButtonDodajActionPerformed
 
     private void TextFieldKoncoweActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldKoncoweActionPerformed
-                try{
+        try{
             pomocnicza3 = TextFieldKoncowe.getText();
         nowy_kon = Integer.parseInt(pomocnicza3);
         if (nowy_kon < 0) nowy_kon = 0;

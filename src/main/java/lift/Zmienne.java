@@ -15,7 +15,7 @@ public class Zmienne {
 
    public static int iloscPieter;
 
-   public static int iloscWind = 1;
+   public static int iloscWind = 2;
 
    public static Algorytm uzywanyAlgorytm = new MyAlgorytm1() ;
    public static double predkosc;
