@@ -15,9 +15,9 @@ public class Zmienne {
 
    public static int iloscPieter;
 
-   public static int iloscWind;
+   public static int iloscWind = 1;
 
-   public static Algorytm uzywanyAlgorytm;
+   public static Algorytm uzywanyAlgorytm = new MyAlgorytm1() ;
    public static double predkosc;
 
    public static double szybkosc; /*szybkosc przejazdu miedzy pietrami*/
